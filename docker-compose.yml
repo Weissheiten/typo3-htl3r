@@ -1,0 +1,19 @@
+version: "2"
+
+services:
+  typo3-db:
+    image: "mariadb:latest"
+    command: "--character-set-server=utf8 --collation-server=utf8_unicode_ci"
+    environment:
+      MYSQL_ROOT_PASSWORD: "typo3htlroot"
+      MYSQL_DATABASE: "typo3"
+      MYSQL_USER: "typo3htl"
+      MYSQL_PASSWORD: "typo3htl"
+
+
+  typo3-web:
+    image: "martinhelmich/typo3:8"
+    links:
+      - "typo3-db"
+    ports:
+      - "80:80"
