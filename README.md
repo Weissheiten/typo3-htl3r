@@ -15,8 +15,6 @@ In the current version this
     * use the command: `docker-compose up`
     * get a coffee while docker prepares the containers (probably it won't need that long, but a coffee is a coffee)
 * Open your browser and surf to http://localhost
-    * You should see the install tool now (at this moment of time it will include a warning! see below)
-* Open your browser and surf to http://localhost
     * Follow the installation instructions
     * Remember that you want to "Manually configure your MySQL TCP/IP connection"
     * Your username and password are located in the docker-compose.yml file (typo3htl / typo3htl) - you usually will NOT want to connect with the root user
