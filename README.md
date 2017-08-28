@@ -16,19 +16,6 @@ In the current version this
     * get a coffee while docker prepares the containers (probably it won't need that long, but a coffee is a coffee)
 * Open your browser and surf to http://localhost
     * You should see the install tool now (at this moment of time it will include a warning! see below)
-* Fix the PCRE error (soon to be fixed inside the image - to this step will not be necessary in the future)
-    * Enter the command shell of the Docker container hosting TYPO3
-        * On Windows and Mac this can be easily achieved by right clicking the Docker symbol (the whale) in your task bar and opening "Kitematic"
-            * click on the running container (most probably named typo3htl3r_typo3-web_1) and the "EXEC" icon in the top bar - this should take you to the shell
-            * now update the PCRE version: copy and paste the commands
-                * `cd /tmp`
-                * `wget http://ftp.de.debian.org/debian/pool/main/p/pcre3/libpcre3_8.39-3_amd64.deb`
-                * `dpkg -i libpcre3_8.39-3_amd64.deb`
-                * `rm -f libpcre3_8.39-3_amd64.deb`
-            * you can type `exit` to leave the shell
-* Inside your main shell (the one where you do the docker-compose commands) restart the containers
-    * `docker-compose stop`
-    * `docker-compose start` (we only need "up" to build, create start and attach the containers once, unless we want to start over)
 * Open your browser and surf to http://localhost
     * Follow the installation instructions
     * Remember that you want to "Manually configure your MySQL TCP/IP connection"
